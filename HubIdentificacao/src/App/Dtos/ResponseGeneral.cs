@@ -1,16 +1,22 @@
 using System.Dynamic;
 using System.Net;
+using System.Text.Json.Serialization;
+using HubIdentificacao.src.App.Model;
 
 namespace HubIdentificacao.src.App.Dtos
 {
     public class ResponseGeneral<T> where T :  class
     {
+        [JsonIgnore]
         public HttpStatusCode CodeHttp  {get; set;}
 
-        public T? DataRetorn {get; set;}
+        [JsonIgnore]
+        public Dados DataRetorn {get; set;}
 
+        [JsonIgnore]
         public ExpandoObject? ErrorReturn {get; set;}
 
+        [JsonIgnore]
         public string? Message {get; set;}
 
     }

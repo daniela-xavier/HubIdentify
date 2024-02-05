@@ -4,6 +4,10 @@ namespace HubIdentificacao.src.App.Model
 {
     public class Dados
     {
+        public Dados()
+        {
+        }
+
         public Dados(string? documento, string? agencia, string? dataHoraLGPD)
         {
             this.documento = documento;
@@ -26,13 +30,13 @@ namespace HubIdentificacao.src.App.Model
         [JsonPropertyName("agencia")]
         public string? agencia { get; set; }
 
-        [JsonPropertyName("idClientToken")]
+        [JsonPropertyName("clienteIdToken")]
         public string? idClientToken { get; set; }
 
-        [JsonPropertyName("dataHoraLGPD")]
+        [JsonPropertyName("dataHora")]
         public string? dataHoraLGPD { get; set; }
 
-        [JsonPropertyName("numeroTicket")]
+        [JsonPropertyName("ticket")]
         public string? numeroTicket { get; set; }
 
         [JsonPropertyName("dataHoraEmissao")]
@@ -52,6 +56,9 @@ namespace HubIdentificacao.src.App.Model
 
         [JsonPropertyName("idAtividade")]
         public string? idAtividade { get; set; }
+
+        [JsonPropertyName("nome")]
+        public string? nome { get; set; }
 
       
                 

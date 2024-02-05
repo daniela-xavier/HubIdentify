@@ -5,8 +5,6 @@
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("/identifyClient")
     .configureLogging(signalR.LogLevel.Information)
-    .withAutomaticReconnect()
-    //.WithMethods("GET", "POST")
     .build();
 
 
@@ -15,39 +13,28 @@ const connection = new signalR.HubConnectionBuilder()
 async function start() {
 
     try {
-
-        await connection.start();
+        await connection.start().catch(err => console.error(err.toString()));
         console.assert(connection.state === signalR.HubConnectionState.Connected);
         console.log('Conectado Hub de identificação');
     } catch (err) {
-
         console.assert(connection.state === signalR.HubConnectionState.Disconnected);itau
         ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
         console.log("Erro: HUBIDENT0004 - " + err.toString());
-        setTimeout(() => start(), 5000);
+        setTimeout(() => start(), 500000);
 
     }
 
 };
 
-
-
 //Caso conexão feche
-
 connection.onclose(async () => {
     await start();
 });
 
-
-
 //Função Inicio da conexão
-
 start();
 
-
-
 //reconectando a conexão
-
 connection.onreconnecting(error => {
     console.assert(connection.state === signalR.HubConnectionState.Reconnecting);
     console.log('Reconectando ao Hub de identificação' + error);
@@ -60,43 +47,39 @@ var clientIdToken;
 
 
 
-connection.on("IdentifyMessage", function (request, response) {
-
-
+connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
 
     //Retorno
-
-    console.log("IdentifyMessage", request, response);
-    const obj = JSON.parse(response);
-
-
+    console.log("IdentifyMessage", responseCodeHttp, responseMessage);
+    console.log("IdentifyMessageData", responseDataRetorn);
+    const obj = JSON.parse(responseDataRetorn);
 
     //Itens abaixo apenas para incluir em nossa interface de testes
 
     //Implementar conforme aplicação
 
-    var pollResultMsg = response + "'.";
-
+    var pollResultMsg = " StatusCode: "+ responseCodeHttp +" - Message:"+ responseMessage;
     var ulPoll = document.getElementById("messagesList");
-
     var liPollResult = document.createElement("li");
-
-    liPollResult.textContent = pollResultMsg;
-
-
-
-
-
+    
+    
     //Guardamos o retorno de clientIdToken,nome e datahoraLGPD na senha que será emitida
+    var token = obj.data.clienteIdToken;
+    var nome = obj.data.nome;
+    var dataHora = obj.data.dataHora;
+    var prioridade = obj.data.idPrioridade;
+    var categoria = obj.data.idCategoria;
 
+
+    if(token && nome && dataHora){
+        document.getElementById("clientIdToken").value = token;
+        document.getElementById("clientNome").value = nome;
+        document.getElementById("dataHoraLGPD").value = dataHora;
+        pollResultMsg += "ClienteIdToken: " + token +"Prioridade: " + prioridade +"Categoria: " + categoria
+    }
+    
+    liPollResult.textContent = pollResultMsg;
     ulPoll.insertBefore(liPollResult, ulPoll.childNodes[0]);
-
-    document.getElementById("clientIdToken").value = obj.cliente.clientIdToken;
-
-    document.getElementById("clientNome").value = obj.cliente.nome;
-
-    document.getElementById("dataHoraLGPD").value = obj.cliente.dataHoraLGPD;
-
 
 
 });
@@ -105,45 +88,22 @@ connection.on("IdentifyMessage", function (request, response) {
 
 connection.on("UpdateIdentifyMessage", function (request, response) {
 
-
-
     //Retorno
-
     console.log("UpdateIdentifyMessage", request, response);
 
-
-
     //Itens abaixo apenas para incluir em nossa interface de testes
-
     //Implementar conforme aplicação
-
     var pollResultMsg = response + "'.";
-
-
-
-
-
     //Implementar conforme aplicação
-
     var ulPoll = document.getElementById("messagesList");
-
     var liPollResult = document.createElement("li");
-
     liPollResult.textContent = pollResultMsg;
-
-
-
     ulPoll.insertBefore(liPollResult, ulPoll.childNodes[0]);
-
-
-
 });
 
 
 
 document.getElementById("validateButton").addEventListener("click", function (event) {
-
-
 
     //Documento digitado
     var documento = document.getElementById("numDocInput").value;
