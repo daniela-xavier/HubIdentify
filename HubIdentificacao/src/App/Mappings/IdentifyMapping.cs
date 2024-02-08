@@ -11,8 +11,8 @@ namespace HubIdentificacao.src.App.MAppings
     public IdentifyMapping()
     {
         CreateMap(typeof (ResponseGeneral<>), typeof(ResponseGeneral<>));
-        CreateMap<IdentifyResponse, Dados>();
-        CreateMap<Dados, IdentifyResponse>();
+        CreateMap<IdentifyResponse, Data>();
+        CreateMap<Data, IdentifyResponse>();
 
     }
 

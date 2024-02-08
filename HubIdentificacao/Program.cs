@@ -20,7 +20,7 @@ builder.Services.AddTransient<IIdentifyAPI, IdentifyAPI>();
 builder.Services.AddTransient<IIdentifyDados, Identify>();
 
 
-builder.Services.AddScoped<Dados>();
+builder.Services.AddScoped<Data>();
 builder.Services.AddRazorPages();
 //builder.Services.AddHostedService<Worker>();
 

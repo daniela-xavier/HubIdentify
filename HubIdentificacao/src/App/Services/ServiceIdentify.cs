@@ -28,13 +28,13 @@ public class ServiceIdentify : IService
         }
        
 
-        public async Task<ResponseGeneral<IdentifyResponse>> GetAPIIdentifyClient(Dados dados)
+        public async Task<ResponseGeneral<IdentifyResponse>> GetAPIIdentifyClient(Data dados)
         {
            var d = await _dadosApi.GetIdentifyClient(dados);
            return _mapper.Map<ResponseGeneral<IdentifyResponse>>(d);
         }
 
-        public async Task<ResponseGeneral<IdentifyResponse>> SetAPIUpdateIdentify(Dados dados)
+        public async Task<ResponseGeneral<IdentifyResponse>> SetAPIUpdateIdentify(Data dados)
         {
             var d = await _dadosApi.SetUpdateClient(dados);
             return _mapper.Map<ResponseGeneral<IdentifyResponse>>(d);

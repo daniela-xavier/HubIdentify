@@ -8,25 +8,25 @@ namespace HubIdentificacao.src.App.Controllers
 {
     public class Identify : IIdentifyDados
     {
-        private Dados _dados;
+        private Data _dados;
 
-        public Identify(Dados dados)
+        public Identify(Data dados)
         {
             _dados = dados;
         }
 
-        public Dados SetIdentify(Dados dados)
+        public Data SetIdentify(Data dados)
         {
             _dados = dados;
             return _dados;
         }
         
-        public Dados SetUpdateIdentify(Dados dados)
+        public Data SetUpdateIdentify(Data dados)
         {
-            _dados.idClientToken = dados.idClientToken;
-            _dados.dataHoraLGPD = dados.dataHoraLGPD;
+            _dados.clienteIdToken = dados.clienteIdToken;
+            _dados.dataHora = dados.dataHora;
             _dados.numeroTicket = dados.numeroTicket;
-            _dados.dataHoraEmissao = dados.dataHoraEmissao;
+            _dados.dataHoraSenha = dados.dataHoraSenha;
             return _dados;
         }
 

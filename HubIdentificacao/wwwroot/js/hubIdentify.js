@@ -50,32 +50,33 @@ var clientIdToken;
 connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
 
     //Retorno
-    console.log("IdentifyMessage", responseCodeHttp, responseMessage);
-    console.log("IdentifyMessageData", responseDataRetorn);
     const obj = JSON.parse(responseDataRetorn);
 
-    //Itens abaixo apenas para incluir em nossa interface de testes
+    console.log("IdentifyMessage", responseCodeHttp, responseMessage);
+    console.log("IdentifyMessageData", responseDataRetorn);    
+    console.log("IdentifyMessageJson", obj);
 
+    //Itens abaixo apenas para incluir em nossa interface de testes
     //Implementar conforme aplicação
 
-    var pollResultMsg = " StatusCode: "+ responseCodeHttp +" - Message:"+ responseMessage;
+    var pollResultMsg = " StatusCode: "+ responseCodeHttp +" - Message: "+ responseMessage +". ";
     var ulPoll = document.getElementById("messagesList");
     var liPollResult = document.createElement("li");
     
     
     //Guardamos o retorno de clientIdToken,nome e datahoraLGPD na senha que será emitida
-    var token = obj.data.clienteIdToken;
-    var nome = obj.data.nome;
-    var dataHora = obj.data.dataHora;
-    var prioridade = obj.data.idPrioridade;
-    var categoria = obj.data.idCategoria;
+    var token = obj.clienteIdToken;
+    var nome = obj.nome;    
+    var prioridade = obj.idPrioridade;
+    var categoria = obj.idCategoria;
+    var dataHora = obj.dataHora;
 
 
     if(token && nome && dataHora){
         document.getElementById("clientIdToken").value = token;
         document.getElementById("clientNome").value = nome;
-        document.getElementById("dataHoraLGPD").value = dataHora;
-        pollResultMsg += "ClienteIdToken: " + token +"Prioridade: " + prioridade +"Categoria: " + categoria
+        document.getElementById("dataHora").value = dataHora;
+        pollResultMsg += "ClienteIdToken: " + token +" Prioridade: " + prioridade +" Categoria: " + categoria
     }
     
     liPollResult.textContent = pollResultMsg;
@@ -116,12 +117,12 @@ document.getElementById("validateButton").addEventListener("click", function (ev
 
 
     //datahora do envio do numero do documento
-    var dataHoraLGPD = new Date();
+    var dataHora = new Date();
 
     //Validação dos campos obrigatórios, como ddocumento e agência
 
     if (documento && agencia) {
-        connection.invoke("IdentifyMessage", documento, agencia, dataHoraLGPD)
+        connection.invoke("IdentifyMessage", documento, agencia, dataHora)
             .then(() => console.log)
             .catch(function (err) {
                 ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
@@ -159,14 +160,14 @@ document.getElementById("UpdateButton").addEventListener("click", function (even
     var numeroTicket = gerarSenhaAleatoria();
 
     //Token armazenado na senha do cliente anteriormente identificado
-    var clientIdToken = document.getElementById("clientIdToken").value;
+    var clienteIdToken = document.getElementById("clientIdToken").value;
 
     //DataHora armazenado na senha do cliente anteriormente identificado
-    var dataHoraLGPD = document.getElementById("dataHoraLGPD").value;
+    var dataHora = document.getElementById("dataHora").value;
 
     if (clientIdToken && agencia && numeroTicket) {
 
-        connection.invoke("UpdateIdentifyMessage", clientIdToken, dataHoraLGPD, agencia, numeroTicket, datahoraEmissao)
+        connection.invoke("UpdateIdentifyMessage", clienteIdToken, dataHora, agencia, numeroTicket, datahoraEmissao)
 
             .catch(function (err) {
                 ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro

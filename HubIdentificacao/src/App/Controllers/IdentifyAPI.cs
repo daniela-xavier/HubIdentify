@@ -11,10 +11,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HubIdentificacao.src.App.Controllers
 {
-    public class IdentifyAPI : IIdentifyAPI
-    {
+    public class IdentifyAPI : IIdentifyAPI    {
 
-        public async Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Dados dados)
+        
+        public async Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Data dados)
         {
             var uri = new Uri($"http://localhost:3000/gestaoatendimento-identificacao/v1/cadastros/");          
 
@@ -25,18 +25,43 @@ namespace HubIdentificacao.src.App.Controllers
                         
             var response = new ResponseGeneral<IdentifyResponse>();
 
+            var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+                            //Lê valores numéricos definidos como string e escreve valores numéricos como strings
+                            NumberHandling = JsonNumberHandling.AllowReadingFromString | JsonNumberHandling.WriteAsString,
+                            //Identa o JSON gerado
+                            WriteIndented = true,
+                            //Ignora propriedades com valor nulo ou padrão
+                            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+                        };
+
             using (var client = new HttpClient())            
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var responseApi = await client.SendAsync(request);
 
-                var contenResp = responseApi.Content.ReadAsStringAsync().Result;                
+                var contenResp = responseApi.Content.ReadAsStringAsync().Result; 
+
+                //Console.WriteLine(contenResp);       
 
                 if (responseApi.IsSuccessStatusCode)
                     {                        
                         response.CodeHttp = responseApi.StatusCode;
-                        response.DataRetorn =  JsonSerializer.Deserialize<Dados>(contenResp);
+                       
+                        try
+                        {
+                            // Desserializando o conteúdo JSON em um objeto do tipo Data
+                            var dataObject = JsonSerializer.Deserialize<ApiResponse<Data>>(contenResp, options);                            
+                            response.DataRetorn = dataObject?.Data;
+                            
+                        }
+                        catch (JsonException ex)
+                        {
+                            Console.WriteLine("Erro durante a desserialização JSON: " + ex.Message);
+                        }                            
+
                     }                    
                 else
                     {
@@ -47,10 +72,10 @@ namespace HubIdentificacao.src.App.Controllers
             }
         }
 
-        public async Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Dados dados)
+        public async Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Data dados)
         {         
 
-            var uri = new Uri($"localhost:3000/gestaoatendimento-identificacao/v1/cadastros/");  
+            var uri = new Uri($"localhost:3000/gestaoatendimento-identificacao/v1/cadastros/${{dados.documento}}");  
 
             var request = new HttpRequestMessage(HttpMethod.Patch,uri);                       
 
@@ -67,7 +92,7 @@ namespace HubIdentificacao.src.App.Controllers
                 if (responseApi.IsSuccessStatusCode)
                     {
                         response.CodeHttp = responseApi.StatusCode;
-                        var objResponse = JsonSerializer.Deserialize<Dados>(contenResp);
+                        var objResponse = JsonSerializer.Deserialize<Data>(contenResp);
                         response.DataRetorn = objResponse;
                     }
                     else

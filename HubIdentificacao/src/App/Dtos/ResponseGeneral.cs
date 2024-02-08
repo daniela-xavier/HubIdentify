@@ -11,7 +11,7 @@ namespace HubIdentificacao.src.App.Dtos
         public HttpStatusCode CodeHttp  {get; set;}
 
         [JsonIgnore]
-        public Dados DataRetorn {get; set;}
+        public Data? DataRetorn {get; set;}
 
         [JsonIgnore]
         public ExpandoObject? ErrorReturn {get; set;}

@@ -9,9 +9,9 @@ public interface IService
     {
         Guid Id { get; }
        
-        public Task<ResponseGeneral<IdentifyResponse>> GetAPIIdentifyClient(Dados dados);
+        public Task<ResponseGeneral<IdentifyResponse>> GetAPIIdentifyClient(Data dados);
 
-        public Task<ResponseGeneral<IdentifyResponse>> SetAPIUpdateIdentify(Dados dados);
+        public Task<ResponseGeneral<IdentifyResponse>> SetAPIUpdateIdentify(Data dados);
 
     }
 }

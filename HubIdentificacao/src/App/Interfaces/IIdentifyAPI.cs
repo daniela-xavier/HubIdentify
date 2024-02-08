@@ -6,9 +6,9 @@ namespace HubIdentificacao.src.App.Interfaces
     public interface IIdentifyAPI    
     {       
                                 
-        Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Dados dados);
+        Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Data dados);
 
-        Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Dados dados);       
+        Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Data dados);       
 
 
     }

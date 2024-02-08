@@ -6,9 +6,9 @@ namespace HubIdentificacao.src.App.Interfaces
     public interface IIdentifyDados       
     {              
 
-        Dados SetIdentify(Dados dados);        
+        Data SetIdentify(Data dados);        
 
-        Dados SetUpdateIdentify(Dados dados);
+        Data SetUpdateIdentify(Data dados);
 
 
     }
