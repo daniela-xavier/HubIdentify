@@ -1,0 +1,100 @@
+POST
+
+Status code 201
+
+{{#switch (body 'documento')}}
+{{#case '41841116882'}}
+{
+ "data": {
+	"nome": "DANIELA",
+	"idPrioridade": "1",
+	"clienteIdToken": "11c5099e-a64d-4589-8fd6-c989a1003506",
+	"idCategoria": null
+	}
+}
+
+{{/case}}
+{{#case '23889568890'}}
+{
+	"data": {
+	"nome": "MIGYAEL",
+	"idPrioridade": "2",
+	"clienteIdToken": "8aaec67b-2b73-4eea-b13e-d6f8b3b64f3f",
+	"idCategoria": null
+	}	
+}
+
+{{/case}}
+{{#case '21467813869'}}
+{
+	"data": {
+	"nome": "IAN",
+	"idPrioridade": null,
+	"clienteIdToken": "8c5c3b44-7a7a-4e85-9992-020ec168486b",
+	"idCategoria": null
+	}	
+}
+
+{{/case}}
+{{#case '53957734000120'}}
+{
+	"data": {
+	"nome": "Empreendedor/(a)",
+	"idPrioridade": null,
+	"clienteIdToken": "64e62f65-7429-4dbd-b979-19358916bd81",
+	"idCategoria": null
+	}
+}
+
+{{/case}}
+{{#case '09993275000148'}}
+{
+	"data": {
+	"nome": "Empreendedor/(a)",
+	"idPrioridade": null,
+	"clienteIdToken": "4ac0d4c3-7317-40c7-bbd4-b5eec002b129",
+	"idCategoria": null
+	}
+}
+
+{{/case}}
+{{/switch}}
+ 
+
+Status code 204
+Body documento equals 61464297835
+Body documento equals 78237506000106
+ 
+
+Status code 205
+Body documento equals 66195385252
+Body documento equals 77572534000100
+
+ 
+
+PATCH
+
+{{#switch ( urlParam 'clientIdToken')}}
+  {{#case '11c5099e-a64d-4589-8fd6-c989a1003506'}}
+  {{/case}}
+  {{#case '8aaec67b-2b73-4eea-b13e-d6f8b3b64f3f'}}
+  {{/case}}
+  {{#case '89784942-1234-1234-5678-c34fdda0c5d2'}}
+  {{/case}}
+  {{#case '53026151-f7d3-4d65-bd39-29134c9a8241'}}
+  {{/case}}
+  {{#case '4ac0d4c3-7317-40c7-bbd4-b5eec002b129'}}
+  {{/case}}
+{{#default}}{{/default}}
+{{/switch}}
+
+
+Status code 201
+
+Route Params clientIdToken equals 11c5099e-a64d-4589-8fd6-c989a1003506
+Route Params clientIdToken equals 8aaec67b-2b73-4eea-b13e-d6f8b3b64f3f
+Route Params clientIdToken equals 89784942-1234-1234-5678-c34fdda0c5d2
+Route Params clientIdToken equals 53026151-f7d3-4d65-bd39-29134c9a8241
+Route Params clientIdToken equals 4ac0d4c3-7317-40c7-bbd4-b5eec002b129 
+
+Status code 204 Default

@@ -1,0 +1,164 @@
+﻿@page
+
+@model IndexModel
+
+@{
+
+    ViewData["Title"] = "Página Inicial";
+
+}
+
+
+
+<div class="text-center">
+
+    <h1 class="display-4">Hub de identificação</h1>
+
+    <p>Aplicação de integração para funcionalidade de identificação de clientes.</p>
+
+</div>
+
+<hr>
+
+<div>
+
+    <p>Realização de testes</p>
+
+</div>
+
+<div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <br />CPF/CNPJ: <input class="col-12" type="text" id="numDocInput" />
+
+                <br />Agência: <input class="col-12" type="text" id="agenciaInput" />
+
+                <br />Token Client: <input class="col-12" id="clientIdToken" />
+
+                <br />Nome Client: <input class="col-12" id="clientNome" />
+
+                <br />Aprovação LGPD: <input class="col-12" id="dataHora" />
+
+                <br /><br />
+
+                <input type="button" id="validateButton" value="Identificar cliente" />
+
+            </div>
+
+            <hr>
+
+        </div>
+
+        </br>
+
+
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <div class="row">Determine a categoria</div>
+
+                <input type="radio" name="Categoria" id="uniclass_personnalite" value="uniclass_personnalite" />
+
+                <label for="uniclass_personnalite">sou uniclass ou personnalité</label>
+
+                <br /><span id="uniclass_personnaliteBlock"></span><br />
+
+
+
+                <input type="radio" name="Categoria" id="correntista" value="correntista" />
+
+                <label for="correntistaAmerica">sou correntista</label>
+
+                <br /><span id="correntistaBlock"></span><br />
+
+
+
+                <input type="radio" name="Categoria" id="empresas" value="empresas" />
+
+                <label for="empresas">sou conta empresa</label>
+
+                <br /><span id="empresasBlock"></span><br />
+
+
+
+                <input type="radio" name="Categoria" id="naotenhoconta" value="naotenhoconta" />
+
+                <label for="naotenhoconta">não tenho conta</label>
+
+                <br /><span id="naotenhocontaBlock"></span><br />
+
+
+
+            </div>
+
+            <div class="col-6">
+
+                <div class="row">Determine a serviço</div>
+
+                <input type="radio" name="Servico" id="servico_1" value="servico_1" />
+
+                <label for="servico_1">Servico 1</label>
+
+                <br /><span id="uniclass_personnaliteBlock"></span><br />
+
+
+
+                <input type="radio" name="Servico" id="servico_2" value="servico_2" />
+
+                <label for="servico_2">Serviço 2</label>
+
+                <br /><span id="servico_2Block"></span><br />
+
+
+
+                <input type="radio" name="Servico" id="servico_3" value="servico_3" />
+
+                <label for="servico_3">Serviço 3</label>
+
+                <br /><span id="servico_3Block"></span><br />
+
+
+
+            </div>
+
+            <div class="col-6">
+
+                <input type="button" id="UpdateButton" value="Adicionar senha" />
+
+                <div class="row">
+
+                </div>
+
+            </div>
+
+            <br /><br />
+            <hr>
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <p>Retorno</p>
+
+                    <ul id="messagesList"></ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/microsoft/signalr/signalr.js"></script>
+        <script src="~/js/hubIdentify.js"></script>
+
+    </div>
