@@ -1,5 +1,5 @@
 # exclude everything except directory foo/bar
     .vscode/*
-	bin
-	obj
+	bin/*
+	obj/*
 	packages
