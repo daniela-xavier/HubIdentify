@@ -9,6 +9,7 @@ using HubIdentificacao.src.App.Controllers;
 using HubIdentificacao.src.App.MAppings;
 using HubIdentificacao.src.App.Model;
 using HubIdentificacao.src.App.Interfaces;
+using HubIdentificacao.src.App.Validators;
 
 namespace HubIdentificacao.src.App.Configs
 {
@@ -39,6 +40,7 @@ namespace HubIdentificacao.src.App.Configs
             services.AddTransient<IIdentifyDados, Identify>();
 
             services.AddScoped<Data>();
+            services.AddScoped<DataTransformData>();
             services.AddRazorPages();
             //builder.Services.AddHostedService<Worker>();
 
@@ -63,10 +65,10 @@ namespace HubIdentificacao.src.App.Configs
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            
             app.UseRouting();
 
-            app.UseAuthorization();        
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -75,10 +77,11 @@ namespace HubIdentificacao.src.App.Configs
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-                endpoints.MapRazorPages(); 
+                endpoints.MapRazorPages();
 
             });
-           Log.Information("Configuração do aplicativo concluída.");
+            
+            Log.Information("Configuração do aplicativo concluída.");
         }
     }
 }

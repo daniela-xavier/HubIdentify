@@ -7,6 +7,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using HubIdentificacao.src.App.Dtos;
 using HubIdentificacao.src.App.Interfaces;
+using HubIdentificacao.src.App.Validators;
 using HubIdentificacao.src.App.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,10 +17,14 @@ namespace HubIdentificacao.src.App.Controllers
     {
         private readonly ILogger _logger;
 
-        public IdentifyAPI(ILogger<IdentifyAPI> logger)
-    {
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-    }
+        private readonly DataTransformData _dataTransform;
+
+        public IdentifyAPI(ILogger<IdentifyAPI> logger, DataTransformData dataTransform)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _dataTransform = dataTransform;
+
+        }
 
         public async Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Data dados)
         {
@@ -27,21 +32,10 @@ namespace HubIdentificacao.src.App.Controllers
 
             var request = new HttpRequestMessage(HttpMethod.Post, uri);
 
-            var json = JsonSerializer.Serialize(dados);
+            var json = _dataTransform.Serializer(dados);
             request.Content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = new ResponseGeneral<IdentifyResponse>();
-
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true,
-                //Lê valores numéricos definidos como string e escreve valores numéricos como strings
-                NumberHandling = JsonNumberHandling.AllowReadingFromString | JsonNumberHandling.WriteAsString,
-                //Identa o JSON gerado
-                WriteIndented = true,
-                //Ignora propriedades com valor nulo ou padrão
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
-            };
 
             using (var client = new HttpClient())
             {
@@ -51,42 +45,46 @@ namespace HubIdentificacao.src.App.Controllers
 
                 var contenResp = responseApi.Content.ReadAsStringAsync().Result;
 
-                if (responseApi.IsSuccessStatusCode)
+                try
                 {
-                    response.CodeHttp = responseApi.StatusCode;
-
-                    if (response.CodeHttp == HttpStatusCode.Created)
+                    if (responseApi.IsSuccessStatusCode)
                     {
-                        try
-                        {
-                            // Desserializando o conteúdo JSON em um objeto do tipo Data
-                            var dataObject = JsonSerializer.Deserialize<ApiResponse<Data>>(contenResp, options);
-                            response.DataRetorn = dataObject?.Data;
 
+                        if (responseApi.StatusCode == HttpStatusCode.Created)
+                        {                            
+                            response.DataRetorn = _dataTransform.DeserializerMask(json,contenResp);
+                            response.CodeHttp = responseApi.StatusCode;
                         }
-                        catch (JsonException ex)
+                        else if (responseApi.StatusCode == HttpStatusCode.NoContent)
                         {
-                            _logger.LogError(ex, "Erro durante a desserialização JSON");
-                            Console.WriteLine("Erro durante a desserialização JSON" + ex.Message);
+                            response.DataRetorn = _dataTransform.Masked(dados);
+                            response.CodeHttp = responseApi.StatusCode;
+                        }
+                        else if (responseApi.StatusCode == HttpStatusCode.ResetContent)
+                        {
+                            response.DataRetorn = dados;
+                            response.CodeHttp = responseApi.StatusCode;
+                        }
+                        else
+                        {
+                            throw new ArgumentException("Cliente não identificado/inválido. Erro durante o retorno das APIs");
                         }
 
                     }
                     else
                     {
-
-                        _logger.LogError(response.CodeHttp + "Cliente não identificado. ");
-                        Console.WriteLine(response.CodeHttp + "Cliente não identificado. ");
-                        throw new ArgumentException("ERR04: Cliente não identificado/inválido.");
+                        response.CodeHttp = responseApi.StatusCode;
+                        _logger.LogError("Erro durante as chamadas de API" + response.CodeHttp);
+                        Console.WriteLine("Erro durante as chamadas de API" + response.CodeHttp);
                     }
-
                 }
-                else
+                catch (System.Exception)
                 {
-                    response.CodeHttp = responseApi.StatusCode;
-                    //response.ErrorReturn = JsonSerializer.Deserialize<ExpandoObject>(contenResp);
+                    response.CodeHttp = HttpStatusCode.UnprocessableEntity;
                     _logger.LogError("Erro durante as chamadas de API" + response.CodeHttp);
                     Console.WriteLine("Erro durante as chamadas de API" + response.CodeHttp);
                 }
+
                 return response;
             }
         }
@@ -94,11 +92,11 @@ namespace HubIdentificacao.src.App.Controllers
         public async Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Data dados)
         {
 
-            var uri = new Uri($"localhost:3000/gestaoatendimento-identificacao/v1/cadastros/${{dados.documento}}");
+            var uri = new Uri($"http://localhost:3000/gestaoatendimento-identificacao/v1/cadastros/${{dados.clienteIdToken}}");
 
             var request = new HttpRequestMessage(HttpMethod.Patch, uri);
 
-            var json = JsonSerializer.Serialize(dados);
+            var json = _dataTransform.Serializer(dados);
             request.Content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = new ResponseGeneral<IdentifyResponse>();
@@ -106,19 +104,47 @@ namespace HubIdentificacao.src.App.Controllers
             using (var client = new HttpClient())
             {
                 var responseApi = await client.SendAsync(request);
-                var contenResp = await responseApi.Content.ReadAsStringAsync();
 
-                if (responseApi.IsSuccessStatusCode)
+                try
+                {
+                    if (responseApi.IsSuccessStatusCode)
+                    {
+
+                        if (responseApi.StatusCode == HttpStatusCode.Created)
+                        {
+                            response.DataRetorn = dados;
+                            response.CodeHttp = responseApi.StatusCode;
+                        }
+                        else if (responseApi.StatusCode == HttpStatusCode.NoContent)
+                        {
+                            response.DataRetorn = dados;
+                            response.CodeHttp = responseApi.StatusCode;
+                        }
+                        else if (responseApi.StatusCode == HttpStatusCode.ResetContent)
+                        {
+                            response.DataRetorn = dados;
+                            response.CodeHttp = responseApi.StatusCode;
+                        }
+                        else
+                        {
+                            throw new ArgumentException("ERR04: Cliente não identificado/inválido. Erro durante o retorno das APIs");
+                        }
+
+                    }
+                    else
+                    {
+                        response.CodeHttp = responseApi.StatusCode;
+                        _logger.LogError("Erro durante as chamadas de API" + response.CodeHttp);
+                        Console.WriteLine("Erro durante as chamadas de API" + response.CodeHttp);
+                    }
+                }
+                catch (System.Exception)
                 {
                     response.CodeHttp = responseApi.StatusCode;
-                    var objResponse = JsonSerializer.Deserialize<Data>(contenResp);
-                    response.DataRetorn = objResponse;
+                    _logger.LogError("Erro durante as chamadas de API" + response.CodeHttp);
+                    Console.WriteLine("Erro durante as chamadas de API" + response.CodeHttp);
                 }
-                else
-                {
-                    response.CodeHttp = responseApi.StatusCode;
-                    response.ErrorReturn = JsonSerializer.Deserialize<ExpandoObject>(contenResp);
-                }
+
                 return response;
             }
         }

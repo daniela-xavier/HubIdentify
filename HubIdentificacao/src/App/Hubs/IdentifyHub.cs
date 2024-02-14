@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.SignalR;
-using System.Text.Json;
+
 using System.Net;
 using Serilog;
 using HubIdentificacao.src.App.Services;
 using HubIdentificacao.src.App.Model;
 using HubIdentificacao.src.App.Validators;
 using HubIdentificacao.src.App.Dtos;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace HubIdentificacao.src.App.Hubs
 {
@@ -15,18 +17,22 @@ namespace HubIdentificacao.src.App.Hubs
 
         private readonly IService _serviceIdentify;
 
-        public IdentifyHub(ILogger<IdentifyHub> logger, IService serviceIdentify)
+        private readonly DataTransformData _dataTransform;
+
+        public IdentifyHub(ILogger<IdentifyHub> logger, IService serviceIdentify,DataTransformData dataTransform)
         {
             _logger = logger;
             _serviceIdentify = serviceIdentify;
+            _dataTransform = dataTransform;
         }
 
         public async Task IdentifyMessage(string documento, string agencia, string dataHora)
         {
+            
             var response = Task.FromResult(new ResponseGeneral<IdentifyResponse>());
 
-            string dadosRetorno = JsonSerializer.Serialize(new Data());
-
+            string dadosRetorno = _dataTransform.Serializer(new Data());
+            
             try
             {
                 // Validar os dados obrigatórios
@@ -35,8 +41,6 @@ namespace HubIdentificacao.src.App.Hubs
                 // Validar os dados de documento
                 DataValidatorRule.ValidateRequiredDocument(documento);
 
-
-
                 Data dados = new Data(documento, agencia, dataHora);
 
                 response = _serviceIdentify.GetAPIIdentifyClient(dados);
@@ -44,26 +48,25 @@ namespace HubIdentificacao.src.App.Hubs
                 if (response.Result.CodeHttp == HttpStatusCode.Created)
                 {
                     response.Result.Message = "Cliente identificado com sucesso";
-                    dadosRetorno = JsonSerializer.Serialize(dados.UpdateData(response.Result.DataRetorn));
+                    dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);                 
+                    _logger.LogInformation("IdentifyMessage invoked successfully.");
                 }
                 else
                 {
-                    response.Result.Message = "Cliente não identificado. HTTP: " + response.Result.CodeHttp + ". Error: " + response.Result.ErrorReturn;
-                    dadosRetorno = JsonSerializer.Serialize(dadosRetorno);
+                    response.Result.Message = "Cliente não identificado.";
+                    dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);
+                    _logger.LogInformation("IdentifyMessage invoked unsuccessfully.");
                 }
 
-                _logger.LogInformation("IdentifyMessage invoked successfully.");
             }
             catch (Exception ex)
-            {                
-                response.Result.CodeHttp = HttpStatusCode.NoContent;
+            {
+                response = Task.FromResult(new ResponseGeneral<IdentifyResponse>());
+                response.Result.CodeHttp = HttpStatusCode.UnprocessableEntity;
                 response.Result.Message = ex.Message;
-                //_logger.LogError(ex.Message);
-               // Console.WriteLine(ex.Message);
+                _logger.LogError(ex.Message);
             }
-
             await Clients.All.SendAsync("IdentifyMessage", response.Result.CodeHttp, response.Result.Message, dadosRetorno).ConfigureAwait(false);
-
         }
 
         public async Task UpdateIdentifyMessage(string clienteIdToken, string dataHora, string agencia, string numeroTicket, string dataHoraSenha)
@@ -71,15 +74,13 @@ namespace HubIdentificacao.src.App.Hubs
         {
             var response = Task.FromResult(new ResponseGeneral<IdentifyResponse>());
 
-            string dadosRetorno = JsonSerializer.Serialize(new Data());
+            string dadosRetorno = _dataTransform.Serializer(new Data());
 
             try
             {
                 // Validar os dados obrigatórios
                 DataValidator.ValidateRequiredTicketData(numeroTicket, dataHora, agencia, dataHoraSenha, clienteIdToken);
 
-                try
-                {
                     Data dados = new Data(clienteIdToken, dataHora, agencia, numeroTicket, dataHoraSenha);
 
                     response = _serviceIdentify.SetAPIUpdateIdentify(dados);
@@ -87,31 +88,20 @@ namespace HubIdentificacao.src.App.Hubs
                     if (response.Result.CodeHttp == HttpStatusCode.Created)
                     {
                         response.Result.Message = "Cliente atualizado com sucesso";
-                        dadosRetorno = JsonSerializer.Serialize(dados.UpdateData(response.Result.DataRetorn));
                     }
                     else
                     {
-                        response.Result.Message = "Cliente não atualizado. HTTP: " + response.Result.CodeHttp + ". Error: " + response.Result.ErrorReturn;
-                        dadosRetorno = JsonSerializer.Serialize(dadosRetorno);
+                        response.Result.Message = "Cliente não atualizado.";
                     }
                     _logger.LogInformation("UpdateIdentifyMessage invoked successfully.");
 
-                }
-                catch (Exception ex)
-                {
-
-                    _logger.LogError(ex.Message, "Ocorreu um erro inesperado em UpdateIdentifyMessage.");
-                    Console.WriteLine(ex.Message);
-                    response.Result.CodeHttp = HttpStatusCode.BadRequest;
-                    response.Result.Message = ex.Message;
-                }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message, "Dados não preenchidos corretamente");
-                Console.WriteLine(ex.Message);
-                response.Result.CodeHttp = HttpStatusCode.NoContent;
+                response = Task.FromResult(new ResponseGeneral<IdentifyResponse>());
+                response.Result.CodeHttp = HttpStatusCode.UnprocessableEntity;
                 response.Result.Message = ex.Message;
+                _logger.LogError(ex.Message);
             }
 
             await Clients.All.SendAsync("UpdateIdentifyMessage", response.Result.CodeHttp, response.Result.Message, dadosRetorno).ConfigureAwait(false);

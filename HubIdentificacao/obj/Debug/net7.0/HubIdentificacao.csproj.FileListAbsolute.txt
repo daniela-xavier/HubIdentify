@@ -37,6 +37,7 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Enrichers.CorrelationId.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Formatting.Compact.dll

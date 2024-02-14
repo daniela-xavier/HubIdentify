@@ -57,6 +57,10 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.CorrelationId": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             }
           },
           "imports": [

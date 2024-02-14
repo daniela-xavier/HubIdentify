@@ -60,77 +60,70 @@
 
         <div class="row">
 
-            <div class="col-6">
+            <div class="col-3">
+
+                <div class="row">Determine a prioridade</div>
+
+                <input type="radio" name="prioridade" id="prioridade1" value="1" />
+                <label for="forPrioridade">Preferencial 80+</label>
+                <br />
+
+                <input type="radio" name="prioridade" id="prioridade2" value="2" />
+                <label for="forPrioridade">Preferencial</label>
+                <br />
+
+                <input type="radio" name="prioridade" id="prioridade3" value="3" />
+                <label for="forPrioridade">Geral</label>
+                <br />
+            </div>
+
+            <div class="col-4">
 
                 <div class="row">Determine a categoria</div>
 
-                <input type="radio" name="Categoria" id="uniclass_personnalite" value="uniclass_personnalite" />
+                <input type="radio" name="Categoria" id="categoria1" value="1" />
+                <label for="uniclass_personnalite">sou uniclass/personnalité</label>
+                <br />
 
-                <label for="uniclass_personnalite">sou uniclass ou personnalité</label>
-
-                <br /><span id="uniclass_personnaliteBlock"></span><br />
-
-
-
-                <input type="radio" name="Categoria" id="correntista" value="correntista" />
-
+                <input type="radio" name="Categoria" id="categoria2" value="2" />
                 <label for="correntistaAmerica">sou correntista</label>
+                <br />
 
-                <br /><span id="correntistaBlock"></span><br />
-
-
-
-                <input type="radio" name="Categoria" id="empresas" value="empresas" />
-
-                <label for="empresas">sou conta empresa</label>
-
-                <br /><span id="empresasBlock"></span><br />
-
-
-
-                <input type="radio" name="Categoria" id="naotenhoconta" value="naotenhoconta" />
-
+                <input type="radio" name="Categoria" id="categoria3" value="3" />
                 <label for="naotenhoconta">não tenho conta</label>
+                <br />
 
-                <br /><span id="naotenhocontaBlock"></span><br />
+                <input type="radio" name="Categoria" id="categoria4" value="4" />
+                <label for="empresas">sou conta Mei</label>
+                <br />
 
+                <input type="radio" name="Categoria" id="categoria5" value="5" />
+                <label for="empresas">sou conta empresa</label>
+                <br />
 
-
+                
             </div>
 
-            <div class="col-6">
+            <div class="col-3">
 
                 <div class="row">Determine a serviço</div>
 
                 <input type="radio" name="Servico" id="servico_1" value="servico_1" />
-
                 <label for="servico_1">Servico 1</label>
-
-                <br /><span id="uniclass_personnaliteBlock"></span><br />
-
-
+                <br />
 
                 <input type="radio" name="Servico" id="servico_2" value="servico_2" />
-
                 <label for="servico_2">Serviço 2</label>
-
-                <br /><span id="servico_2Block"></span><br />
-
-
+                <br />
 
                 <input type="radio" name="Servico" id="servico_3" value="servico_3" />
-
                 <label for="servico_3">Serviço 3</label>
-
-                <br /><span id="servico_3Block"></span><br />
-
-
-
+                <br />
             </div>
 
             <div class="col-6">
 
-                <input type="button" id="UpdateButton" value="Adicionar senha" />
+                <input type="button" id="UpdateButton" value="Emitir senha" />
 
                 <div class="row">
 
@@ -160,5 +153,6 @@
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/microsoft/signalr/signalr.js"></script>
         <script src="~/js/hubIdentify.js"></script>
+        
 
     </div>

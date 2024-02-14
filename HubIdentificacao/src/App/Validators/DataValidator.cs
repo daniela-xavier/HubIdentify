@@ -8,7 +8,7 @@ namespace HubIdentificacao.src.App.Validators
         {
             if (string.IsNullOrEmpty(documento) || string.IsNullOrEmpty(dataHora) || string.IsNullOrEmpty(agencia))
             {
-                throw new ArgumentException("ERR04: Documento, dataHora e agencia são campos obrigatórios.");
+                throw new ArgumentException("Documento, dataHora e agencia são campos obrigatórios.");
             }
         }
 
@@ -16,7 +16,7 @@ namespace HubIdentificacao.src.App.Validators
         {
             if (string.IsNullOrEmpty(numeroTicket) || string.IsNullOrEmpty(dataHora) || string.IsNullOrEmpty(agencia) || string.IsNullOrEmpty(dataHoraSenha) || string.IsNullOrEmpty(clienteIdToken))
             {
-                throw new ArgumentException("ERR04: Número do ticket, dataHora, agencia, dataHoraEmissao e clienteIdToken são campos obrigatórios.");
+                throw new ArgumentException("Número do ticket, dataHora, agencia, dataHoraEmissao e clienteIdToken são campos obrigatórios.");
             }
         }
     }
