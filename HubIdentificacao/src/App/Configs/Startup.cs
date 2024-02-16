@@ -58,8 +58,6 @@ namespace HubIdentificacao.src.App.Configs
             {
                 // Middleware para tratamento de erros em produção
                 app.UseExceptionHandler("/Error");
-                // O valor padrão HSTS é de 30 dias. Você pode querer alterar isso para cenários de produção, consulte https://aka.ms/aspnetcore-hsts.
-
                 app.UseHsts();
             }
 
@@ -67,6 +65,8 @@ namespace HubIdentificacao.src.App.Configs
             app.UseStaticFiles();
             
             app.UseRouting();
+
+            app.UseCors("AllowAll");
 
             app.UseAuthorization();
 

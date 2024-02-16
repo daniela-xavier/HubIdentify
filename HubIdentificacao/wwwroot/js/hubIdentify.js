@@ -1,22 +1,66 @@
 ﻿"use strict";
-let tokenOauth = '';
+let newCorrelationId; 
+
+// Função para gerar CorrelationId aleatório
+function generateCorrelationId() {
+    newCorrelationId = Date.now().toString() + Math.floor(Math.random() * 1000);
+    //console.log("Novo correlationId gerado:", newCorrelationId);
+    return newCorrelationId;
+}
+
+// Função para coletar o token de autenticação
+function generateToken() {    
+    let tokenOauth = '';1223
+    
+    while (!tokenOauth) {
+        tokenOauth = prompt("Por favor, insira seu token de autenticação:");
+        if (tokenOauth) {
+            tokenOauth = tokenOauth.trim();  
+            localStorage.setItem("tokenOauth", tokenOauth);           
+        } else {
+            alert("Você precisa fornecer um token de autenticação.");
+        }
+    }    
+    return tokenOauth;
+}
+
 
 //configurações da conexão
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("/identifyClient", { // URL do hub e configurações opcionais
         accessTokenFactory: () => generateToken(), // Token de acesso
         transport: signalR.HttpTransportType.WebSockets, // Especificar o transporte para WebSockets
-        headers: { // Adiciona cabeçalhos personalizados
-            "x-itau-visual-apikey": generateApikeyId(), // Adicionar apikey como cabeçalho
-            "x-itau-visual-correlationID": generateCorrelationId(), // Adicionar CorrelationId como cabeçalho            
+        headers : {
+            "x-itau-visual-apikey": "020de488-2aee-42ad-990d-1159fd43d3ea",
+            "x-itau-visual-correlationID": newCorrelationId
         }
     })
     .configureLogging(signalR.LogLevel.Information)
     .build();
 
+// Evento chamado quando a conexão é estabelecida
+connection.on("connected", () => {
+    // Gerar um novo correlationId
+    //newCorrelationId = generateCorrelationId();  
+
+    // Enviar uma requisição para o servidor para obter os detalhes do handshake
+    connection.invoke("GetHandshakeDetails")
+        .then(handshakeDetails => {
+            const accessToken = handshakeDetails.accessToken;
+            const apiKey = handshakeDetails.headers['x-itau-visual-apikey'];
+            const correlationId = handshakeDetails.headers['x-itau-visual-correlationID'];
+
+            console.log("accessToken:", accessToken);
+            console.log("x-itau-visual-apikey:", apiKey);
+            console.log("x-itau-visual-correlationID:", correlationId);
+        })
+        .catch(error => {
+            console.error("Failed to retrieve handshake details:", error);
+        }); 
+});
+
 
 //Função Inicio da conexão
-
 async function start() {
 
     try {
@@ -26,7 +70,7 @@ async function start() {
     } catch (err) {
         console.assert(connection.state === signalR.HubConnectionState.Disconnected); itau
         ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
-        console.log("Erro: HUBIDENT0001 - " + err.toString());
+        console.log("Erro: " + err.toString());
         setTimeout(() => start(), 500000);
 
     }
@@ -41,18 +85,21 @@ connection.onclose(async () => {
 //Função Inicio da conexão
 start();
 
+
 //reconectando a conexão
-connection.onreconnecting(error => {
+connection.onreconnecting(error => {    
     console.assert(connection.state === signalR.HubConnectionState.Reconnecting);
     console.log('Reconectando ao Hub de identificação' + error);
 });
+
 
 var chartBlock = '\u25A3';
 
 
 
 connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
-
+    newCorrelationId = generateCorrelationId();
+    
     //Retorno
     const obj = JSON.parse(responseDataRetorn);
 
@@ -105,6 +152,8 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
 
 
 connection.on("UpdateIdentifyMessage", function (responseCodeHttp, responseMessage) {
+
+    newCorrelationId = generateCorrelationId();   
 
     //Retorno
     console.log("IdentifyMessage", responseCodeHttp, responseMessage);
@@ -221,30 +270,6 @@ function gerarSenhaAleatoria() {
 
 }
 
-// Função para gerar CorrelationId aleatório
-function generateCorrelationId() {
-    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
-
-// Função para gerar CorrelationId aleatório
-function generateApikeyId() {
-    return "020de488-2aee-42ad-990d-1159fd43d3ea";
-}
-
-// Função para gerar CorrelationId aleatório
-function generateToken() {    
-    let tokenOauth = '';
-    while (!tokenOauth) {
-        tokenOauth = prompt("Por favor, insira seu token de autenticação:");
-        if (tokenOauth) {
-            tokenOauth = tokenOauth.trim();  
-            localStorage.setItem("tokenOauth", tokenOauth);           
-        } else {
-            alert("Você precisa fornecer um token de autenticação.");
-        }
-    }    
-    return tokenOauth;
-}
 
 document.addEventListener("DOMContentLoaded", function() {
     const tokenFromStorage = localStorage.getItem("tokenOauth");

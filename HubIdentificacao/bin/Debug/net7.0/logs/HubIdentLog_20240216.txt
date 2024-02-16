@@ -1,8 +1,42 @@
-2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
-2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
-2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
-2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
-2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
-2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
-2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 76.7357ms 
-2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-16 12:23:00 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-16 12:23:00 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-16 12:23:00 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-16 12:23:00 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 65.8536ms 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-02-16 12:23:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /js/hubIdentify.js was not modified 
+2024-02-16 12:23:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : No CORS policy found for the specified request. 
+2024-02-16 12:23:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-16 12:23:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-16 12:23:05 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : No CORS policy found for the specified request. 
+2024-02-16 12:23:05 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-16 12:23:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-16 12:23:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 11 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 4.9797ms 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-02-16 12:23:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-16 12:23:54 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : No CORS policy found for the specified request. 
+2024-02-16 12:23:54 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-16 12:23:54 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-16 12:23:54 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : No CORS policy found for the specified request. 
+2024-02-16 12:23:54 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-16 12:24:05 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-16 12:24:05 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 1ms 
+2024-02-16 12:24:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : IdentifyMessage invoked successfully. 
+2024-02-16 12:24:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 77ms 
+2024-02-16 12:25:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : IdentifyMessage invoked successfully. 
+2024-02-16 12:25:01 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 9ms 
+2024-02-16 12:25:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : IdentifyMessage invoked successfully. 
+2024-02-16 12:25:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 7ms 
+2024-02-16 12:25:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : IdentifyMessage invoked successfully. 
+2024-02-16 12:25:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 9ms 
+2024-02-16 12:25:22 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : CPF inválido. (Parameter 'document') 
+2024-02-16 12:25:22 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 0ms 
+2024-02-16 12:25:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application is shutting down... 
+2024-02-16 12:25:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
