@@ -1,5 +1,5 @@
 ﻿"use strict";
-let newCorrelationId; 
+let newCorrelationId;
 
 // Função para gerar CorrelationId aleatório
 function generateCorrelationId() {
@@ -9,18 +9,18 @@ function generateCorrelationId() {
 }
 
 // Função para coletar o token de autenticação
-function generateToken() {    
-    let tokenOauth = '';1223
-    
+function generateToken() {
+    let tokenOauth = ''; 1223
+
     while (!tokenOauth) {
         tokenOauth = prompt("Por favor, insira seu token de autenticação:");
         if (tokenOauth) {
-            tokenOauth = tokenOauth.trim();  
-            localStorage.setItem("tokenOauth", tokenOauth);           
+            tokenOauth = tokenOauth.trim();
+            localStorage.setItem("tokenOauth", tokenOauth);
         } else {
             alert("Você precisa fornecer um token de autenticação.");
         }
-    }    
+    }
     return tokenOauth;
 }
 
@@ -30,7 +30,7 @@ const connection = new signalR.HubConnectionBuilder()
     .withUrl("/identifyClient", { // URL do hub e configurações opcionais
         accessTokenFactory: () => generateToken(), // Token de acesso
         transport: signalR.HttpTransportType.WebSockets, // Especificar o transporte para WebSockets
-        headers : {
+        headers: {
             "x-itau-visual-apikey": "020de488-2aee-42ad-990d-1159fd43d3ea",
             "x-itau-visual-correlationID": newCorrelationId
         }
@@ -56,7 +56,7 @@ connection.on("connected", () => {
         })
         .catch(error => {
             console.error("Failed to retrieve handshake details:", error);
-        }); 
+        });
 });
 
 
@@ -87,7 +87,7 @@ start();
 
 
 //reconectando a conexão
-connection.onreconnecting(error => {    
+connection.onreconnecting(error => {
     console.assert(connection.state === signalR.HubConnectionState.Reconnecting);
     console.log('Reconectando ao Hub de identificação' + error);
 });
@@ -99,7 +99,7 @@ var chartBlock = '\u25A3';
 
 connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
     newCorrelationId = generateCorrelationId();
-    
+
     //Retorno
     const obj = JSON.parse(responseDataRetorn);
 
@@ -112,20 +112,50 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
     var ulPoll = document.getElementById("messagesList");
     var liPollResult = document.createElement("li");
 
-    //Guardamos o retorno de clientIdToken,nome e datahoraLGPD na senha que será emitida
-    var token = obj.clienteIdToken;
-    var nome = obj.nome;
-    var prioridade = obj.idPrioridade;
-    var categoria = obj.idCategoria;
-    var dataHora = obj.dataHora;
+    if (obj !== null && typeof obj === 'object') {
+        // Verifica se obj.clienteIdToken não é vazio antes de atribuir o valor
+        if (obj.clienteIdToken !== undefined && obj.clienteIdToken !== null) {
+            var token = obj.clienteIdToken;
+        } else {
+            var token = "";
+        }
 
+        // Verifica se obj.nome não é vazio antes de atribuir o valor
+        if (obj.nome !== undefined && obj.nome !== null) {
+            var nome = obj.nome;
+        } else {
+            var nome = "";
+        }
 
-    if (token && nome && dataHora) {
-        document.getElementById("clientIdToken").value = token;
-        document.getElementById("clientNome").value = nome;
-        document.getElementById("dataHora").value = dataHora;
-        pollResultMsg += "ClienteIdToken: " + token + " Prioridade: " + prioridade + " Categoria: " + categoria
-    }
+        // Verifica se obj.idPrioridade não é vazio antes de atribuir o valor
+        if (obj.idPrioridade !== undefined && obj.idPrioridade !== null) {
+            var prioridade = obj.idPrioridade;
+        } else {
+            var prioridade = "";
+        }
+
+        // Verifica se obj.idCategoria não é vazio antes de atribuir o valor
+        if (obj.idCategoria !== undefined && obj.idCategoria !== null) {
+            var categoria = obj.idCategoria;
+        } else {
+            var categoria = "";
+        }
+
+        // Verifica se obj.dataHora não é vazio antes de atribuir o valor
+        if (obj.dataHora !== undefined && obj.dataHora !== null) {
+            var dataHora = obj.dataHora;
+        } else {
+            var dataHora = "";
+        }
+
+        if (token && nome && dataHora) {
+            document.getElementById("clientIdToken").value = token;
+            document.getElementById("clientNome").value = nome;
+            document.getElementById("dataHora").value = dataHora;
+            pollResultMsg += "ClienteIdToken: " + token + " Prioridade: " + prioridade + " Categoria: " + categoria
+        }
+
+    } 
 
     if (prioridade) {
         prioridade = "prioridade" + prioridade;
@@ -143,7 +173,7 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
             if (radiocategoria) {
                 radiocategoria.checked = true;
             }
-        }        
+        }
     }
 
     liPollResult.textContent = pollResultMsg;
@@ -153,7 +183,7 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
 
 connection.on("UpdateIdentifyMessage", function (responseCodeHttp, responseMessage) {
 
-    newCorrelationId = generateCorrelationId();   
+    newCorrelationId = generateCorrelationId();
 
     //Retorno
     console.log("IdentifyMessage", responseCodeHttp, responseMessage);
@@ -187,7 +217,7 @@ document.getElementById("validateButton").addEventListener("click", function (ev
 
     //Token da requisição
     var tokenOauth = document.getElementById("tokenOauth");
-    
+
     //Validação dos campos obrigatórios, como documento e agência
     if (documento && agencia && tokenOauth) {
         connection.invoke("IdentifyMessage", documento, agencia, dataHora)
@@ -202,7 +232,7 @@ document.getElementById("validateButton").addEventListener("click", function (ev
         //Caso dados não tenham sido encontrados ou limpados para novo cliente
         ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
         //Continuar para fluxo principal, com a apresentação da tela inicial
-        return console.log("Erro: HUBIDENT0003 - Documentos não foram encontrados para realizar identificação do cliente");
+        return console.log("Documentos não foram encontrados para realizar identificação do cliente");
     }
     event.preventDefault();
 
@@ -225,15 +255,13 @@ document.getElementById("UpdateButton").addEventListener("click", function (even
 
     //Token armazenado na senha do cliente anteriormente identificado
     var token = document.getElementById("clientIdToken").value;
-    
+
     //DataHora armazenado na senha do cliente anteriormente identificado
     var dataHora = document.getElementById("dataHora").value;
 
     //Token da requisição
     var tokenOauth = document.getElementById("tokenOauth");
 
-    console.log(tokenOauth);
-    
     if (token && agencia && numeroTicket && tokenOauth) {
 
         connection.invoke("UpdateIdentifyMessage", token, dataHora, agencia, numeroTicket, datahoraEmissao)
@@ -248,7 +276,7 @@ document.getElementById("UpdateButton").addEventListener("click", function (even
         //Caso dados não tenham sido encontrados ou limpados para novo cliente
         //ATENÇÃO!: Logar também na aplicação principal o retorno de erro
         //Continuar para fluxo principal, com a apresentação da tela inicial
-        return console.log("Erro: HUBIDENT0003 - Informações da senha não foram encontrados para atualização da identificação do cliente");
+        return console.log("Informações da senha não foram encontrados para atualização da identificação do cliente");
     }
     event.preventDefault();
 });
@@ -271,7 +299,7 @@ function gerarSenhaAleatoria() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const tokenFromStorage = localStorage.getItem("tokenOauth");
     if (tokenFromStorage) {
         document.getElementById("tokenOauth").value = tokenFromStorage;
