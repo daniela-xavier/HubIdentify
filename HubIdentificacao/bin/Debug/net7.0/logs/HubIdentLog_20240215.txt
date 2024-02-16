@@ -1,0 +1,241 @@
+2024-02-15 15:39:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 76.7591ms 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /js/hubIdentify.js was not modified 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 15:39:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 7.3584ms 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 15:40:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 5.3834ms 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 15:41:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 4.898ms 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:14:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:15:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:15:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:15:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 4.6153ms 
+2024-02-15 16:15:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:15:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:15:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 1.1785ms 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.8391ms 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:15:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.9041ms 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:38:31 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.4944ms 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:44:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.5072ms 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:48:27 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:48:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:48:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:48:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:48:52 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:48:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:00 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:12 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:16 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:20 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : One or more errors occurred. (Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente. (localhost:3000)) 
+2024-02-15 16:49:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application is shutting down... 
+2024-02-15 16:49:51 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:50:03 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-15 16:50:03 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-15 16:50:03 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-15 16:50:03 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 68.5378ms 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 3.8529ms 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:04 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:50:06 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 2.1757ms 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:50:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:50:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : IdentifyMessage invoked successfully. 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 1.0034ms 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:15 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:24 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 16:51:26 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.8471ms 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:34 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.6491ms 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:35 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.5978ms 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.576ms 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.5694ms 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:51:38 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:51:47 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 16:52:11 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application is shutting down... 
+2024-02-15 16:52:11 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 16:56:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-15 16:56:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-15 16:56:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-15 16:56:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 69.3347ms 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 16:56:08 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 16:56:18 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 17:08:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application is shutting down... 
+2024-02-15 17:08:07 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 17:08:42 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-15 17:08:42 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-15 17:08:42 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-15 17:08:42 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-15 17:08:42 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 63.0469ms 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /js/hubIdentify.js was not modified 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 17:08:43 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 17:11:36 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 3.1262ms 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : The file /js/hubIdentify.js was not modified 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 17:11:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 1.254ms 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 17:11:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 17:11:48 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 17:14:09 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 17:14:09 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 17:14:09 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.8218ms 
+2024-02-15 17:14:09 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 17:14:09 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 17:14:11 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 17:14:11 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 17:14:13 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 17:14:24 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 0.9318ms 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-02-15 17:14:46 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/identifyClient' 
+2024-02-15 17:56:37 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 

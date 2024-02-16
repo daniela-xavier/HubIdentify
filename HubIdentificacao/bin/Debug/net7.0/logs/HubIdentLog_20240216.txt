@@ -1,0 +1,8 @@
+2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Now listening on: http://localhost:5296 
+2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Application started. Press Ctrl+C to shut down. 
+2024-02-16 10:02:56 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Hosting environment: Development 
+2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executing endpoint '/Index' 
+2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed page /Index in 76.7357ms 
+2024-02-16 10:02:57 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/Index' 

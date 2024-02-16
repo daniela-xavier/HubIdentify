@@ -1,5 +1,5 @@
 ﻿"use strict";
-
+let tokenOauth = '';
 
 //configurações da conexão
 const connection = new signalR.HubConnectionBuilder()
@@ -48,7 +48,8 @@ connection.onreconnecting(error => {
 });
 
 var chartBlock = '\u25A3';
-var clientIdToken;
+
+
 
 connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
 
@@ -63,7 +64,6 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
     var pollResultMsg = " StatusCode: " + responseCodeHttp + " - Message: " + responseMessage + ". ";
     var ulPoll = document.getElementById("messagesList");
     var liPollResult = document.createElement("li");
-
 
     //Guardamos o retorno de clientIdToken,nome e datahoraLGPD na senha que será emitida
     var token = obj.clienteIdToken;
@@ -109,7 +109,6 @@ connection.on("UpdateIdentifyMessage", function (responseCodeHttp, responseMessa
     //Retorno
     console.log("IdentifyMessage", responseCodeHttp, responseMessage);
 
-
     //Itens abaixo apenas para incluir em nossa interface de testes
     //Implementar conforme aplicação
     var pollResultMsg = " StatusCode: " + responseCodeHttp + " - Message: " + responseMessage + ". ";
@@ -136,17 +135,18 @@ document.getElementById("validateButton").addEventListener("click", function (ev
 
     //datahora do envio do numero do documento
     var dataHora = new Date();
-    
-    //Validação dos campos obrigatórios, como ddocumento e agência
 
-    if (documento && agencia) {
+    //Token da requisição
+    var tokenOauth = document.getElementById("tokenOauth");
+    
+    //Validação dos campos obrigatórios, como documento e agência
+    if (documento && agencia && tokenOauth) {
         connection.invoke("IdentifyMessage", documento, agencia, dataHora)
             .then(() => console.log)
             .catch(function (err) {
                 ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
                 //Continuar para fluxo principal, com a apresentação da tela inicial
                 return console.error(err.toString());
-
             });
 
     } else {
@@ -155,7 +155,6 @@ document.getElementById("validateButton").addEventListener("click", function (ev
         //Continuar para fluxo principal, com a apresentação da tela inicial
         return console.log("Erro: HUBIDENT0003 - Documentos não foram encontrados para realizar identificação do cliente");
     }
-
     event.preventDefault();
 
 });
@@ -180,8 +179,13 @@ document.getElementById("UpdateButton").addEventListener("click", function (even
     
     //DataHora armazenado na senha do cliente anteriormente identificado
     var dataHora = document.getElementById("dataHora").value;
+
+    //Token da requisição
+    var tokenOauth = document.getElementById("tokenOauth");
+
+    console.log(tokenOauth);
     
-    if (token && agencia && numeroTicket) {
+    if (token && agencia && numeroTicket && tokenOauth) {
 
         connection.invoke("UpdateIdentifyMessage", token, dataHora, agencia, numeroTicket, datahoraEmissao)
 
@@ -191,18 +195,13 @@ document.getElementById("UpdateButton").addEventListener("click", function (even
                 return console.error(err.toString());
             });
 
-
-
     } else {
         //Caso dados não tenham sido encontrados ou limpados para novo cliente
         //ATENÇÃO!: Logar também na aplicação principal o retorno de erro
         //Continuar para fluxo principal, com a apresentação da tela inicial
         return console.log("Erro: HUBIDENT0003 - Informações da senha não foram encontrados para atualização da identificação do cliente");
-
     }
-
     event.preventDefault();
-
 });
 
 
@@ -233,9 +232,26 @@ function generateApikeyId() {
 }
 
 // Função para gerar CorrelationId aleatório
-function generateToken() {
-    return "123456";
+function generateToken() {    
+    let tokenOauth = '';
+    while (!tokenOauth) {
+        tokenOauth = prompt("Por favor, insira seu token de autenticação:");
+        if (tokenOauth) {
+            tokenOauth = tokenOauth.trim();  
+            localStorage.setItem("tokenOauth", tokenOauth);           
+        } else {
+            alert("Você precisa fornecer um token de autenticação.");
+        }
+    }    
+    return tokenOauth;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const tokenFromStorage = localStorage.getItem("tokenOauth");
+    if (tokenFromStorage) {
+        document.getElementById("tokenOauth").value = tokenFromStorage;
+    }
+});
 
 function limparDadosParaIdentificacao() {
     document.getElementById("clientIdToken").value = "";
