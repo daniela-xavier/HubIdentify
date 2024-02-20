@@ -1,15 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using HubIdentificacao.src.App.Hubs;
 using HubIdentificacao.src.App.Services;
-using HubIdentificacao.src.App.Controllers;
 using HubIdentificacao.src.App.MAppings;
 using HubIdentificacao.src.App.Model;
 using HubIdentificacao.src.App.Interfaces;
 using HubIdentificacao.src.App.Validators;
+using HubIdentificacao.src.App.Configs;
+using HubIdentificacao.src.App.Controllers;
 
 namespace HubIdentificacao.src.App.Configs
 {
@@ -21,13 +23,23 @@ namespace HubIdentificacao.src.App.Configs
         }
 
         public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            // Carregar configurações do arquivo appsettings.json
+            var allowedOrigins = Configuration.GetSection("AllowedOrigins").Get<string[]>();
+
+            // Registrar o serviço AppSettings para injeção de dependência
+            services.AddSingleton<AppSettings>();
+
+
             // Configuração do serviço de logging
             services.AddLogging(loggingBuilder =>
             {
                 // Configuração do logger Serilog
-                var logger = LoggerConfig.CreateLogger(Configuration);
+                var serviceProvider = services.BuildServiceProvider();
+                var appSettings = serviceProvider.GetService<AppSettings>();
+                var logger = new LoggerConfig(appSettings).CreateLogger(Configuration);
                 loggingBuilder.AddSerilog(logger);
             });
 
@@ -42,9 +54,18 @@ namespace HubIdentificacao.src.App.Configs
             services.AddScoped<Data>();
             services.AddScoped<DataTransformData>();
             services.AddRazorPages();
-            //builder.Services.AddHostedService<Worker>();
 
             services.AddAutoMapper(typeof(IdentifyMapping));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder
+                        .WithOrigins(Configuration.GetSection("AllowedOrigins").Get<string[]>())
+                        .AllowAnyMethod()
+                        .WithHeaders("Authorization", "Content-Type", "access_token", "x-itau-apikey", "x-itau-visual-correlationID")
+                        .AllowCredentials());
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -63,12 +84,15 @@ namespace HubIdentificacao.src.App.Configs
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
-            
+
             app.UseRouting();
 
-            app.UseCors("AllowAll");
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
+
+            // Registra o middleware para validar a solicitação de negociação
+            app.UseValidateNegotiate();
 
             app.UseEndpoints(endpoints =>
             {
@@ -78,9 +102,8 @@ namespace HubIdentificacao.src.App.Configs
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapRazorPages();
-
             });
-            
+
             Log.Information("Configuração do aplicativo concluída.");
         }
     }

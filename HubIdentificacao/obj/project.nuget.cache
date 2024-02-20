@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKx0+2RGqgCXi0cRvN9RLvYSShYmG+hhqrRafup8AefvEKDyrVVgJ1d8JmW4jRIWyl/xJV6pWg+x0buupyxxCQ==",
+  "dgSpecHash": "J04TF98RWjM3X2Oh9ALNe/ioONyC05ebtcOMKB3pI6M8qFrWhuwhV5HqLUCGb3xeh+Sj0G9jxKfLczJFCBTwiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
+  "projectFilePath": "c:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danix\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\danix\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

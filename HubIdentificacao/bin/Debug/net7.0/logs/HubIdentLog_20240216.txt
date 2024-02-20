@@ -161,3 +161,4 @@
 2024-02-16 12:59:39 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de IdentifyMessage. 6ms 
 2024-02-16 12:59:44 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : UpdateIdentifyMessage invoked successfully. 
 2024-02-16 12:59:44 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Processamento de UpdateIdentifyMessage. 9ms 
+2024-02-16 13:09:28 [1.0] ApiKeyID:ApiKeyID CorrelationID: T1150012402001 1500 [INF] : Executed endpoint '/identifyClient' 

@@ -1,38 +1,31 @@
-﻿"use strict";
-let newCorrelationId;
+﻿'use strict';
 
-// Função para gerar CorrelationId aleatório
-function generateCorrelationId() {
-    newCorrelationId = Date.now().toString() + Math.floor(Math.random() * 1000);
-    //console.log("Novo correlationId gerado:", newCorrelationId);
-    return newCorrelationId;
-}
+let newCorrelationId;
 
 // Função para coletar o token de autenticação
 function generateToken() {
-    let tokenOauth = ''; 1223
+    let tokenOauth = prompt("Por favor, insira seu token de autenticação:");
 
-    while (!tokenOauth) {
-        tokenOauth = prompt("Por favor, insira seu token de autenticação:");
-        if (tokenOauth) {
-            tokenOauth = tokenOauth.trim();
-            localStorage.setItem("tokenOauth", tokenOauth);
-        } else {
-            alert("Você precisa fornecer um token de autenticação.");
-        }
+    if (tokenOauth) {
+        tokenOauth = tokenOauth.trim();
+        localStorage.setItem("tokenOauth", tokenOauth);
+    } else {
+        alert("Você precisa fornecer um token de autenticação.");
     }
+
     return tokenOauth;
 }
 
+// Obter token de autenticação
+const token = generateToken();
 
 //configurações da conexão
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("/identifyClient", { // URL do hub e configurações opcionais
-        accessTokenFactory: () => generateToken(), // Token de acesso
-        transport: signalR.HttpTransportType.WebSockets, // Especificar o transporte para WebSockets
+    .withUrl("/identifyClient", {
+        accessTokenFactory: () => token,
+        transport: signalR.HttpTransportType.WebSockets,
         headers: {
-            "x-itau-visual-apikey": "020de488-2aee-42ad-990d-1159fd43d3ea",
-            "x-itau-visual-correlationID": newCorrelationId
+            "x-itau-apikey": "fe042281-51e7-4cde-983d-b5306a70d8c6-A"
         }
     })
     .configureLogging(signalR.LogLevel.Information)
@@ -40,19 +33,15 @@ const connection = new signalR.HubConnectionBuilder()
 
 // Evento chamado quando a conexão é estabelecida
 connection.on("connected", () => {
-    // Gerar um novo correlationId
-    //newCorrelationId = generateCorrelationId();  
 
     // Enviar uma requisição para o servidor para obter os detalhes do handshake
     connection.invoke("GetHandshakeDetails")
         .then(handshakeDetails => {
             const accessToken = handshakeDetails.accessToken;
-            const apiKey = handshakeDetails.headers['x-itau-visual-apikey'];
-            const correlationId = handshakeDetails.headers['x-itau-visual-correlationID'];
+            const correlationId = handshakeDetails.headers['Sec-Websocket-Key'];
 
             console.log("accessToken:", accessToken);
-            console.log("x-itau-visual-apikey:", apiKey);
-            console.log("x-itau-visual-correlationID:", correlationId);
+            console.log("correlationId:", correlationId);
         })
         .catch(error => {
             console.error("Failed to retrieve handshake details:", error);
@@ -68,7 +57,7 @@ async function start() {
         console.assert(connection.state === signalR.HubConnectionState.Connected);
         console.log('Conectado Hub de identificação');
     } catch (err) {
-        console.assert(connection.state === signalR.HubConnectionState.Disconnected); itau
+        console.assert(connection.state === signalR.HubConnectionState.Disconnected);
         ////ATENÇÃO!: Logar também na aplicação principal o retorno de erro
         console.log("Erro: " + err.toString());
         setTimeout(() => start(), 500000);
@@ -98,7 +87,6 @@ var chartBlock = '\u25A3';
 
 
 connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, responseDataRetorn) {
-    newCorrelationId = generateCorrelationId();
 
     //Retorno
     const obj = JSON.parse(responseDataRetorn);
@@ -155,7 +143,7 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
             pollResultMsg += "ClienteIdToken: " + token + " Prioridade: " + prioridade + " Categoria: " + categoria
         }
 
-    } 
+    }
 
     if (prioridade) {
         prioridade = "prioridade" + prioridade;
@@ -182,8 +170,6 @@ connection.on("IdentifyMessage", function (responseCodeHttp, responseMessage, re
 
 
 connection.on("UpdateIdentifyMessage", function (responseCodeHttp, responseMessage) {
-
-    newCorrelationId = generateCorrelationId();
 
     //Retorno
     console.log("IdentifyMessage", responseCodeHttp, responseMessage);

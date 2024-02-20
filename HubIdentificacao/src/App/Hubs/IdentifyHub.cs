@@ -23,39 +23,33 @@ namespace HubIdentificacao.src.App.Hubs
             _serviceIdentify = serviceIdentify;
             _dataTransform = dataTransform;
         }
-
-        public override async Task OnConnectedAsync()
-        {
-            await Clients.Caller.SendAsync("connected");
-            await base.OnConnectedAsync();
-        }
-
         public async Task<object> GetHandshakeDetails()
         {
             var stopwatch = Stopwatch.StartNew();
 
-            // Lógica para obter os detalhes do handshake
-            var accessToken = Context.GetHttpContext().Request.Query["access_token"];
-            var apiKey = Context.GetHttpContext().Request.Headers["x-itau-visual-apikey"];
-            var correlationId = Context.GetHttpContext().Request.Headers["x-itau-visual-correlationID"];
+            // Lógica para obter o detalhes do handshake
+            var accessToken = Guid.NewGuid().ToString(); // Gere um token de autenticação aleatório
 
-            Console.WriteLine("accessToken:" + accessToken);
-            Console.WriteLine("apiKey:" + apiKey);
-            Console.WriteLine("correlationId:" + correlationId);
+            var correlationId = Context.GetHttpContext().Request.Headers["Sec-Websocket-Key"];
+            correlationId += Guid.NewGuid().ToString();
+
+            _logger.LogInformation("accessToken: {accessToken}", accessToken);
+            _logger.LogInformation("correlationId: {correlationId}", correlationId);
+
+            stopwatch.Stop();
+            var time = stopwatch.ElapsedMilliseconds;
+            _logger.LogInformation("GetHandshakeDetails invoked successfully. {time}ms", time);
 
             return new
             {
                 accessToken = accessToken,
                 headers = new
                 {
-                    apiKey = apiKey,
                     correlationID = correlationId
                 }
             };
-            stopwatch.Stop();
-            var time = stopwatch.ElapsedMilliseconds;
-            _logger.LogInformation("IdentifyMessage invoked successfully. {time}ms", time);
         }
+
         public async Task IdentifyMessage(string documento, string agencia, string dataHora)
         {
             var stopwatch = Stopwatch.StartNew();

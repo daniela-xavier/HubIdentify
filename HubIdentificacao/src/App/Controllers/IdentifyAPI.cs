@@ -1,15 +1,11 @@
-using System.Dynamic;
 using System.Net;
 using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using HubIdentificacao.src.App.Dtos;
 using HubIdentificacao.src.App.Interfaces;
 using HubIdentificacao.src.App.Validators;
 using HubIdentificacao.src.App.Model;
-using Microsoft.AspNetCore.Mvc;
+using HubIdentificacao.src.App.Configs;
 
 namespace HubIdentificacao.src.App.Controllers
 {
@@ -19,16 +15,19 @@ namespace HubIdentificacao.src.App.Controllers
 
         private readonly DataTransformData _dataTransform;
 
-        public IdentifyAPI(ILogger<IdentifyAPI> logger, DataTransformData dataTransform)
+        private readonly AppSettings _appSettings;
+
+        public IdentifyAPI(ILogger<IdentifyAPI> logger, DataTransformData dataTransform, AppSettings appSettings)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _dataTransform = dataTransform;
+            _appSettings = appSettings;
 
         }
 
         public async Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Data dados)
         {
-            var uri = new Uri($"http://localhost:3000/gestaoatendimento-identificacao/v1/cadastros/");
+            var uri = new Uri(_appSettings.HubUrl+_appSettings.Rota+_appSettings.Dominio);
 
             var request = new HttpRequestMessage(HttpMethod.Post, uri);
 
@@ -92,7 +91,7 @@ namespace HubIdentificacao.src.App.Controllers
         public async Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Data dados)
         {
 
-            var uri = new Uri($"http://localhost:3000/gestaoatendimento-identificacao/v1/cadastros/${{dados.clienteIdToken}}");
+            var uri = new Uri(_appSettings.HubUrl+_appSettings.Rota+_appSettings.Dominio);
 
             var request = new HttpRequestMessage(HttpMethod.Patch, uri);
 
