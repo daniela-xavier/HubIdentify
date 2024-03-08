@@ -16,8 +16,16 @@ function generateToken() {
     return tokenOauth;
 }
 
+// Função para gerar um ID de correlação aleatório
+function generateCorrelationId() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
+
 // Obter token de autenticação
 const token = generateToken();
+
+// Gerar um correlationId aleatório
+var correlationId = generateCorrelationId();
 
 //configurações da conexão
 const connection = new signalR.HubConnectionBuilder()

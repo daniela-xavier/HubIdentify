@@ -61,6 +61,10 @@
             "Serilog.Enrichers.CorrelationId": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.0, )"
             }
           },
           "imports": [

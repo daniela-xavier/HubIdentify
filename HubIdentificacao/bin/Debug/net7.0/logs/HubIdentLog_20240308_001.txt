@@ -1,0 +1,1 @@
+2024-03-08 01:48:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 

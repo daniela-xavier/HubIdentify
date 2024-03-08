@@ -1,0 +1,206 @@
+2024-03-08 01:18:20 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Now listening on: http://localhost:5296 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Application started. Press Ctrl+C to shut down. 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Hosting environment: Development 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 68.3011ms 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:18:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:18:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:18:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:18:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:18:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:18:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:18:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:18:25 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:18:25 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:18:25 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 3.3693ms 
+2024-03-08 01:18:25 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:18:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:18:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:18:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:18:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:18:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:18:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : TraceId:  
+2024-03-08 01:18:55 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : IdentifyMessage invoked successfully. 
+2024-03-08 01:18:55 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Processamento de IdentifyMessage. 5905ms 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Now listening on: http://localhost:5296 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Application started. Press Ctrl+C to shut down. 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Hosting environment: Development 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 66.2091ms 
+2024-03-08 01:19:52 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:19:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:19:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:19:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 3.3736ms 
+2024-03-08 01:19:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:19:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:19:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:19:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 1.6461ms 
+2024-03-08 01:19:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:20:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:20:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:20:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:20:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:20:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:20:09 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : TraceId: vGObv7AXdzQSiqK-_imhpQ 
+2024-03-08 01:20:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : IdentifyMessage invoked successfully. 
+2024-03-08 01:20:22 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Processamento de IdentifyMessage. 14945ms 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed page /Index in 2.5923ms 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:20:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:20:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:20:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:20:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:20:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : CORS policy execution successful. 
+2024-03-08 01:20:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:21:41 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : TraceId: AHcSG_SEdyCds6BmmvPDrQ 
+2024-03-08 01:21:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-03-08 01:21:56 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A CorrelationID:   [INF] : Processamento de IdentifyMessage. 20467ms 
+2024-03-08 01:28:45 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Now listening on: http://localhost:5296 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Application started. Press Ctrl+C to shut down. 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Hosting environment: Development 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 68.7677ms 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 3.9193ms 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:28:47 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:47 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:47 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:47 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:47 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:28:50 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:28:50 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:28:51 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:28:51 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:28:51 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 1.1235ms 
+2024-03-08 01:28:51 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:28:51 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:28:58 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:58 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:58 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:28:58 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:28:58 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:29:05 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Tamanho do documento inválido. (Parameter 'document') 
+2024-03-08 01:29:05 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 273ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:11 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 77ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:19 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APIUnprocessableEntity 
+2024-03-08 01:29:19 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 10ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:31 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 6ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:33 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:29:33 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:29:33 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 6ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:42 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:29:42 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:29:42 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 16ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:29:55 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:29:55 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:29:55 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:30:36 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 6ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:30:38 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:30:38 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:30:38 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:31:37 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:31:37 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:31:37 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:31:39 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 7ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:32:17 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:32:17 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:32:17 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:34:20 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:34:20 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:34:20 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 4ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:34:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 5ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:34:23 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:34:23 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:34:23 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 3ms  - TraceId: 7EzLztlfCDtUH0LabjpQkw 
+2024-03-08 01:34:44 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Application is shutting down... 
+2024-03-08 01:34:44 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Now listening on: http://localhost:5296 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Application started. Press Ctrl+C to shut down. 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Hosting environment: Development 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:35:10 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:35:11 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 77.7689ms 
+2024-03-08 01:35:11 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:35:11 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:35:14 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:35:14 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:35:14 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 5.4642ms 
+2024-03-08 01:35:14 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:35:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:35:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:35:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:35:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:35:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:35:30 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 132ms  - TraceId: Gni6i1W_F10LibRsgJ0XzQ 
+2024-03-08 01:35:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 9ms  - TraceId: Gni6i1W_F10LibRsgJ0XzQ 
+2024-03-08 01:36:13 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:36:23 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:36:25 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 44919ms  - TraceId: Gni6i1W_F10LibRsgJ0XzQ 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : User profile is available. Using 'C:\Users\danix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Now listening on: http://localhost:5296 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Application started. Press Ctrl+C to shut down. 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Hosting environment: Development 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 68.8129ms 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:40:00 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:40:04 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:40:04 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:40:04 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 3.4593ms 
+2024-03-08 01:40:04 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:40:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:40:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:40:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:40:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:40:24 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:40:34 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 119ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014034 
+2024-03-08 01:40:48 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:40:53 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:40:54 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 14938ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014040 
+2024-03-08 01:41:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 43ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014146 
+2024-03-08 01:44:15 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:44:16 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:44:16 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 8343ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014409 
+2024-03-08 01:44:41 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:44:41 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:44:41 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 960ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014440 
+2024-03-08 01:46:37 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [ERR] : Erro durante as chamadas de APINotFound 
+2024-03-08 01:46:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:46:46 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 54066ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014554 
+2024-03-08 01:47:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:47:57 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 7126ms  - TraceId: OzBDlxT-_z9j4DtB3fL6Gg_20240308_014750 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/Index' 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Route matched with {page = "/Index"}. Executing page /Index 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed page /Index in 1.254ms 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/Index' 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : The file /HubIdentificacao.styles.css was not modified 
+2024-03-08 01:49:02 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient' 
+2024-03-08 01:49:08 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:49:08 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient/negotiate' 
+2024-03-08 01:49:08 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executed endpoint '/identifyClient/negotiate' 
+2024-03-08 01:49:08 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : CORS policy execution successful. 
+2024-03-08 01:49:08 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Executing endpoint '/identifyClient' 
+2024-03-08 01:49:15 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de IdentifyMessage. 8ms  - TraceId: 3TWowfYGGr-NiLNPriHSJQ_20240308_014915 
+2024-03-08 01:49:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : UpdateIdentifyMessage invoked successfully. 
+2024-03-08 01:49:21 [1.0] ApiKeyID:fe042281-51e7-4cde-983d-b5306a70d8c6-A   [INF] : Processamento de UpdateIdentifyMessage. 5432ms  - TraceId: 3TWowfYGGr-NiLNPriHSJQ_20240308_014916 

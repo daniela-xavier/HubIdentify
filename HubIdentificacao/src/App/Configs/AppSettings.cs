@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Configuration;
 namespace HubIdentificacao.src.App.Configs;
+
 public class AppSettings
 {
     public string ApiKey { get; set; }
@@ -10,15 +11,23 @@ public class AppSettings
     public string Dominio { get; set; }
     public string ClientSecret { get; set; }
     public string ClientId { get; set; }
+    public string issuer { get; set; }
+    public string iss { get; set; }
+    public string scope { get; set; }
+
+
 
     public AppSettings(IConfiguration configuration)
     {
         configuration.GetSection("API").Bind(this);
         configuration.GetSection("Serilog").Bind(this);
         configuration.GetSection("AllowedOrigins").Bind(this);
+        configuration.GetSection("issuer").Bind(this);
+        configuration.GetSection("iss").Bind(this);
+        configuration.GetSection("scope").Bind(this);
     }
 
-    public static void SetupSerilogPath(IConfiguration configuration,AppSettings appSettings)
+    public static void SetupSerilogPath(IConfiguration configuration, AppSettings appSettings)
     {
         var appDir = AppDomain.CurrentDomain.BaseDirectory;
         //var appSettings = new AppSettings(configuration); // Instanciando AppSettings com as configurações

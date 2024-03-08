@@ -35,6 +35,10 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.AspNetCore.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Enrichers.CorrelationId.dll
@@ -46,6 +50,7 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Sinks.File.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.IO.Pipelines.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Text.Encodings.Web.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Text.Json.dll

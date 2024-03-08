@@ -22,7 +22,6 @@ namespace HubIdentificacao.src.App.Controllers
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _dataTransform = dataTransform;
             _appSettings = appSettings;
-
         }
 
         public async Task<ResponseGeneral<IdentifyResponse>> GetIdentifyClient(Data dados)
@@ -91,7 +90,7 @@ namespace HubIdentificacao.src.App.Controllers
         public async Task<ResponseGeneral<IdentifyResponse>> SetUpdateClient(Data dados)
         {
 
-            var uri = new Uri(_appSettings.HubUrl+_appSettings.Rota+_appSettings.Dominio);
+            var uri = new Uri(_appSettings.HubUrl+_appSettings.Rota+_appSettings.Dominio+"/"+dados.clienteIdToken);
 
             var request = new HttpRequestMessage(HttpMethod.Patch, uri);
 

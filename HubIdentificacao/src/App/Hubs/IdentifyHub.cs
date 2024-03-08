@@ -1,11 +1,23 @@
-using Microsoft.AspNetCore.SignalR;
-using System.Threading.Tasks;
-using System.Net;
 using HubIdentificacao.src.App.Services;
 using HubIdentificacao.src.App.Model;
 using HubIdentificacao.src.App.Validators;
 using HubIdentificacao.src.App.Dtos;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
+using System;
+using System.Net.WebSockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
+using System.Threading.Tasks;
+using System.Net;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 
 namespace HubIdentificacao.src.App.Hubs
 {
@@ -17,18 +29,23 @@ namespace HubIdentificacao.src.App.Hubs
 
         private readonly DataTransformData _dataTransform;
 
-        public IdentifyHub(ILogger<IdentifyHub> logger, IService serviceIdentify, DataTransformData dataTransform)
+        private readonly DataAutorization _dataAutorization;
+
+        public IdentifyHub(ILogger<IdentifyHub> logger, IService serviceIdentify, DataTransformData dataTransform, DataAutorization dataAutorization)
         {
             _logger = logger;
             _serviceIdentify = serviceIdentify;
             _dataTransform = dataTransform;
+            _dataAutorization = dataAutorization;
         }
         public async Task<object> GetHandshakeDetails()
         {
             var stopwatch = Stopwatch.StartNew();
 
             // Lógica para obter o detalhes do handshake
-            var accessToken = Guid.NewGuid().ToString(); // Gere um token de autenticação aleatório
+            //var accessToken = Guid.NewGuid().ToString(); // Gere um token de autenticação aleatório
+
+            var accessToken = Context.GetHttpContext().Request.Headers["token"];
 
             var correlationId = Context.GetHttpContext().Request.Headers["Sec-Websocket-Key"];
             correlationId += Guid.NewGuid().ToString();
@@ -57,31 +74,49 @@ namespace HubIdentificacao.src.App.Hubs
 
             string dadosRetorno = _dataTransform.Serializer(new Data());
 
+            string dataHoraAtual = DateTime.Now.ToString("_yyyyMMdd_HHmmss");
+
+            var traceId = Context.GetHttpContext().Request.Query["Id"].ToString()+dataHoraAtual;
+
+            var accessToken = Context.GetHttpContext().Request.Query["access_token"];
+
             try
             {
-                // Validar os dados obrigatórios
-                DataValidator.ValidateRequiredData(documento, agencia, dataHora);
-
-                // Validar os dados de documento
-                DataValidatorRule.ValidateRequiredDocument(documento);
-
-                Data dados = new Data(documento, agencia, dataHora);
-
-                response = _serviceIdentify.GetAPIIdentifyClient(dados);
-
-                if (response.Result.CodeHttp == HttpStatusCode.Created)
+                // Validar token
+                bool tokenValido = _dataAutorization.ValidateToken(accessToken);
+                if (tokenValido)
                 {
-                    response.Result.Message = "Cliente identificado com sucesso";
-                    dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);
-                    _logger.LogInformation("IdentifyMessage invoked successfully.");
-                }
-                else
-                {
-                    response.Result.Message = "Cliente não identificado.";
-                    dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);
-                    _logger.LogInformation("IdentifyMessage invoked unsuccessfully.");
+                    // Validar os dados obrigatórios
+                    DataValidator.ValidateRequiredData(documento, agencia, dataHora);
+
+                    // Validar os dados de documento
+                    DataValidatorRule.ValidateRequiredDocument(documento);
+
+                    Data dados = new Data(documento, agencia, dataHora);
+
+                    response = _serviceIdentify.GetAPIIdentifyClient(dados);
+
+                    if (response.Result.CodeHttp == HttpStatusCode.Created)
+                    {
+                        response.Result.Message = "Cliente identificado com sucesso";
+                        dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);
+                        //_logger.LogInformation("IdentifyMessage invoked successfully."+" - "+$"TraceId: {traceId}");
+                    }
+                    else
+                    {
+                        response.Result.Message = "Cliente não identificado.";
+                        dadosRetorno = _dataTransform.Serializer(response.Result.DataRetorn);
+                        // _logger.LogInformation("IdentifyMessage invoked unsuccessfully."+" - "+$"TraceId: {traceId}");
+                    }
                 }
 
+            }
+            catch (SecurityTokenException ex)
+            {
+                response = Task.FromResult(new ResponseGeneral<IdentifyResponse>());
+                response.Result.CodeHttp = HttpStatusCode.Unauthorized;
+                response.Result.Message = ex.Message;
+                _logger.LogError(ex.Message);
             }
             catch (Exception ex)
             {
@@ -93,7 +128,7 @@ namespace HubIdentificacao.src.App.Hubs
 
             stopwatch.Stop();
             var time = stopwatch.ElapsedMilliseconds;
-            _logger.LogInformation("Processamento de IdentifyMessage. {time}ms", time);
+            _logger.LogInformation("Processamento de IdentifyMessage. {time}ms  - TraceId: {TraceId}", time, traceId);
             await Clients.All.SendAsync("IdentifyMessage", response.Result.CodeHttp, response.Result.Message, dadosRetorno).ConfigureAwait(false);
         }
 
@@ -105,25 +140,35 @@ namespace HubIdentificacao.src.App.Hubs
 
             string dadosRetorno = _dataTransform.Serializer(new Data());
 
+            string dataHoraAtual = DateTime.Now.ToString("_yyyyMMdd_HHmmss");
+
+            var traceId = Context.GetHttpContext().Request.Query["Id"].ToString()+dataHoraAtual;
+
+            var accessToken = Context.GetHttpContext().Request.Query["access_token"];
+
             try
             {
-                // Validar os dados obrigatórios
-                DataValidator.ValidateRequiredTicketData(numeroTicket, dataHora, agencia, dataHoraSenha, clienteIdToken);
-
-                Data dados = new Data(clienteIdToken, dataHora, agencia, numeroTicket, dataHoraSenha);
-
-                response = _serviceIdentify.SetAPIUpdateIdentify(dados);
-
-                if (response.Result.CodeHttp == HttpStatusCode.Created)
+                // Validar token
+                bool tokenValido = _dataAutorization.ValidateToken(accessToken);
+                if (tokenValido)
                 {
-                    response.Result.Message = "Cliente atualizado com sucesso";
-                }
-                else
-                {
-                    response.Result.Message = "Cliente não atualizado.";
-                }
-                _logger.LogInformation("UpdateIdentifyMessage invoked successfully.");
+                    // Validar os dados obrigatórios
+                    DataValidator.ValidateRequiredTicketData(numeroTicket, dataHora, agencia, dataHoraSenha, clienteIdToken);
 
+                    Data dados = new Data(clienteIdToken, dataHora, agencia, numeroTicket, dataHoraSenha);
+
+                    response = _serviceIdentify.SetAPIUpdateIdentify(dados);
+
+                    if (response.Result.CodeHttp == HttpStatusCode.Created)
+                    {
+                        response.Result.Message = "Cliente atualizado com sucesso";
+                    }
+                    else
+                    {
+                        response.Result.Message = "Cliente não atualizado.";
+                    }
+                    _logger.LogInformation("UpdateIdentifyMessage invoked successfully.");
+                }
             }
             catch (Exception ex)
             {
@@ -135,7 +180,7 @@ namespace HubIdentificacao.src.App.Hubs
 
             stopwatch.Stop();
             var time = stopwatch.ElapsedMilliseconds;
-            _logger.LogInformation("Processamento de UpdateIdentifyMessage. {time}ms", time);
+            _logger.LogInformation("Processamento de UpdateIdentifyMessage. {time}ms  - TraceId: {TraceId}", time, traceId);
             await Clients.All.SendAsync("UpdateIdentifyMessage", response.Result.CodeHttp, response.Result.Message, dadosRetorno).ConfigureAwait(false);
 
         }

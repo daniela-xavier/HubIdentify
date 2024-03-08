@@ -12,6 +12,7 @@ using HubIdentificacao.src.App.Interfaces;
 using HubIdentificacao.src.App.Validators;
 using HubIdentificacao.src.App.Configs;
 using HubIdentificacao.src.App.Controllers;
+using Microsoft.AspNetCore.Http;
 
 namespace HubIdentificacao.src.App.Configs
 {
@@ -50,9 +51,12 @@ namespace HubIdentificacao.src.App.Configs
             services.AddTransient<IService, ServiceIdentify>();
             services.AddTransient<IIdentifyAPI, IdentifyAPI>();
             services.AddTransient<IIdentifyDados, Identify>();
+            
 
             services.AddScoped<Data>();
             services.AddScoped<DataTransformData>();
+            services.AddScoped<DataAutorization>();
+            
             services.AddRazorPages();
 
             services.AddAutoMapper(typeof(IdentifyMapping));
@@ -63,9 +67,12 @@ namespace HubIdentificacao.src.App.Configs
                     builder => builder
                         .WithOrigins(Configuration.GetSection("AllowedOrigins").Get<string[]>())
                         .AllowAnyMethod()
-                        .WithHeaders("Authorization", "Content-Type", "access_token", "x-itau-apikey", "x-itau-visual-correlationID")
+                        .WithHeaders("Authorization", "Content-Type", "x-itau-apikey", "x-itau-visual-correlationID")
                         .AllowCredentials());
             });
+
+            
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -91,8 +98,12 @@ namespace HubIdentificacao.src.App.Configs
 
             app.UseAuthorization();
 
-            // Registra o middleware para validar a solicitação de negociação
-            app.UseValidateNegotiate();
+            // Adicionar middleware ValidateNegotiate
+            app.UseMiddleware<ValidateNegotiate>();
+
+            // Adicionar middleware DataAutorization
+            //app.UseMiddleware<DataAutorization>();
+
 
             app.UseEndpoints(endpoints =>
             {
