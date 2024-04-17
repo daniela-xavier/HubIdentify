@@ -25,6 +25,8 @@ public class AppSettings
         configuration.GetSection("issuer").Bind(this);
         configuration.GetSection("iss").Bind(this);
         configuration.GetSection("scope").Bind(this);
+        configuration.GetSection("ApiKey").Bind(this);
+        configuration.GetSection("ApiKeyIntegration").Bind(this);
     }
 
     public static void SetupSerilogPath(IConfiguration configuration, AppSettings appSettings)

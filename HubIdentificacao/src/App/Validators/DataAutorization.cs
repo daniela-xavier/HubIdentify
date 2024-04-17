@@ -1,15 +1,6 @@
 using HubIdentificacao.src.App.Configs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Net.WebSockets;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.SignalR;
-using System.Threading.Tasks;
 
 namespace HubIdentificacao.src.App.Validators
 {
@@ -20,9 +11,10 @@ namespace HubIdentificacao.src.App.Validators
         private readonly ILogger<DataAutorization> _logger;
 
 
-        public DataAutorization(AppSettings appSettings, ILogger<DataAutorization> _logger)
+        public DataAutorization(AppSettings appSettings, ILogger<DataAutorization> logger)
         {
             _appSettings = appSettings;
+            _logger = logger;
         }
 
         public bool ValidateToken(string accessToken)
@@ -56,6 +48,7 @@ namespace HubIdentificacao.src.App.Validators
                 }
 
                 /*// Validar escopo
+              
                 var requiredScopes = new[] { "gestao-atendimento-passante.write", "gestao-atendimento-passante.read" }; // Defina seus escopos requeridos aqui
                 if (!requiredScopes.All(scope => jwtToken.Payload.Claims.Any(c => c.Type == "scope" && c.Value == scope)))
                 {

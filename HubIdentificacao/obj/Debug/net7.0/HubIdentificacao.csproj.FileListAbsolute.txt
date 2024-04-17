@@ -1,3 +1,13 @@
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIde
+ntify\HubIdentificacao\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.csproj.AssemblyReference.cache
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.AssemblyInfoInputs.cache
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.AssemblyInfo.cs
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.csproj.CoreCompileInputs.cache
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.RazorAssemblyInfo.cache
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.RazorAssemblyInfo.cs
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\API Hub Identificacao - Request.json
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\API Hub Identificacao - Response.json
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\appsettings.Development.json
@@ -6,6 +16,9 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\appsettings.Staging.json
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\package-lock.json
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\HubIdentificacao.staticwebassets.runtime.json
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\HubIdentificacao.exe
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\HubIdentificacao.deps.json
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\HubIdentificacao.runtimeconfig.json
@@ -13,6 +26,7 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\HubIdentificacao.pdb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Castle.Core.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
@@ -39,6 +53,7 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Moq.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.AspNetCore.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\Serilog.Enrichers.CorrelationId.dll
@@ -55,15 +70,11 @@ C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Deb
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Text.Encodings.Web.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Text.Json.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\System.Threading.Channels.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.abstractions.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.assert.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.core.dll
+C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\xunit.execution.dotnet.dll
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.csproj.AssemblyReference.cache
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.AssemblyInfoInputs.cache
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.AssemblyInfo.cs
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.csproj.CoreCompileInputs.cache
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.RazorAssemblyInfo.cache
-C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\HubIdentificacao.RazorAssemblyInfo.cs
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\staticwebassets\msbuild.HubIdentificacao.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\staticwebassets\msbuild.build.HubIdentificacao.props
 C:\Users\danix\OneDrive\Documentos\Projetos\HubIdentify\HubIdentificacao\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.HubIdentificacao.props
