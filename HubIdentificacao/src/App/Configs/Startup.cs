@@ -67,8 +67,9 @@ namespace HubIdentificacao.src.App.Configs
                     builder => builder
                         .WithOrigins(Configuration.GetSection("AllowedOrigins").Get<string[]>())
                         .AllowAnyMethod()
-                        .WithHeaders("Authorization", "Content-Type", "x-itau-apikey", "x-itau-visual-correlationID")
-                        .AllowCredentials());
+                        //.WithHeaders("Authorization", "Content-Type", "x-itau-apikey", "x-itau-visual-correlationID")
+                        .WithHeaders(Configuration.GetSection("Headers").Get<string[]>())
+                        );
             });
 
             

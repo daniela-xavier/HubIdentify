@@ -33,7 +33,7 @@ const connection = new signalR.HubConnectionBuilder()
         accessTokenFactory: () => token,
         transport: signalR.HttpTransportType.WebSockets,
         headers: {
-            "x-itau-apikey": "fe042281-51e7-4cde-983d-b5306a70d8c6-A"
+            "x-itau-apikey": "fe042281-51e7-4cde-983d-b5306a70d8c6"
         }
     })
     .configureLogging(signalR.LogLevel.Information)

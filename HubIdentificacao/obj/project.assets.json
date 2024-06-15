@@ -2694,11 +2694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
+      "projectUniqueName": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\Git\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
       "projectName": "HubIdentificacao",
-      "projectPath": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
+      "projectPath": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\Git\\HubIdentify\\HubIdentificacao\\HubIdentificacao.csproj",
       "packagesPath": "C:\\Users\\danix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\HubIdentify\\HubIdentificacao\\obj\\",
+      "outputPath": "C:\\Users\\danix\\OneDrive\\Documentos\\Projetos\\Git\\HubIdentify\\HubIdentificacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danix\\AppData\\Roaming\\NuGet\\NuGet.Config"

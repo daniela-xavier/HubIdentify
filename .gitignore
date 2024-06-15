@@ -3,3 +3,8 @@
 	bin/*
 	obj/*
 	packages
+HubIdentificacao/bin/*
+HubIdentificacao/obj/*
+HubIdentificacao/bin/Debug/
+HubIdentificacao/wwwroot/lib/bootstrap/
+HubIdentificacao/wwwroot/lib/bootstrap/dist/
